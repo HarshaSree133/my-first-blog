@@ -7,17 +7,13 @@
     <header>
         <h1><a href="/">Harsha's blog</a></h1>
     </header>
-    <article>
-        <h2>My first post</h2>
-        <time>published: 19.06.2022</time>
-        <p>I am so happy that finally I could post something</p>
-    </article>
-
+    {% for x in posts %}
     <article>
         
-        <h2>My second post</h2>
-        <time>published:19.06.2022</time>
-        <p>just trying out new things</p>
+        <h2><a href=''>{{x.title}}</a></h2>
+        <time>{{x.published_date}}</time>
+        <p>{{x.text}}</p>
     </article>
+    {% endfor %}
   </body>
 </html>
